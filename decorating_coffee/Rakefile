@@ -1,5 +1,3 @@
-raise "\n\t\tMove with the time\n\t\t\tinstall Ruby 1.9!!!\n\n" unless RUBY_VERSION.include? '1.9'
-
 require 'rubygems'
 require 'bundler'
 require 'rake'

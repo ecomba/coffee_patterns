@@ -12,11 +12,11 @@ describe 'Serving' do
   context 'two shots of espresso' do
     let(:doppio) { EspressoShot.new(EspressoShot.new) }
     it 'costs 2.70' do
-      dopio.cost.should == 2.70
+      doppio.cost.should == 2.70
     end
 
     it 'has the ingredients' do
-      dopio.get_ingredients.should == 'one espresso shot and one espresso shot'
+      doppio.get_ingredients.should == 'one espresso shot and one espresso shot'
     end
   end
 

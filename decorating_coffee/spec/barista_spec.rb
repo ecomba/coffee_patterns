@@ -19,4 +19,12 @@ describe 'Serving' do
       dopio.get_ingredients.should == 'one espresso shot and one espresso shot'
     end
   end
+
+  context 'a latte' do
+    #let(:latte) { EspressoShot.new(WarmMilk.new) }
+
+    it 'has ingredients' do
+      pending 'one espresso shot and warm milk'
+    end
+  end
 end

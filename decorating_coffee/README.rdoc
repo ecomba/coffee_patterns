@@ -18,6 +18,9 @@ coffee to your customers.
 * Caramel
 * Ice
 
+Once you have created the classes above add specifications in the barista_spec.rb
+file and start serving coffee.
+
 == Intent
 
 Sometimes we want to attach responsibilities to an object dynamically without

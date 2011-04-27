@@ -10,7 +10,7 @@ describe 'Serving' do
   end
 
   context 'two shots of espresso' do
-    let(:dopio) { EspressoShot.new(EspressoShot.new) }
+    let(:doppio) { EspressoShot.new(EspressoShot.new) }
     it 'costs 2.70' do
       dopio.cost.should == 2.70
     end

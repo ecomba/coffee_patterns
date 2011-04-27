@@ -1,5 +1,12 @@
+raise "\n\t\tMove with the time\n\t\t\tinstall Ruby 1.9!!!\n\n" unless RUBY_VERSION.include? '1.9'
+
 require 'rubygems'
 require 'bundler'
+require 'rake'
+
+require 'rspec/core'
+require 'rspec/core/rake_task'
+
 begin
   Bundler.setup(:default)
 rescue Bundler::BundlerError => e
@@ -7,15 +14,10 @@ rescue Bundler::BundlerError => e
   $stderr.puts "Run `bundle install` to install missing gems"
   exit e.status_code
 end
-require 'rake'
-
-# Testing the application and progress
-require 'rspec/core'
-require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new(:spec) do |spec|
   spec.pattern = FileList['spec/**/*_spec.rb']
   spec.rspec_opts = '-f d -c'
 end
 
-task default: :spec
+task :default => :spec

@@ -1,0 +1,9 @@
+# bundler
+.bundle
+.DS_Store
+.rvmrc
+*.tmproj
+*~
+\#*
+.\#*
+*.swp

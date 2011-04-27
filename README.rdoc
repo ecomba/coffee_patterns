@@ -1,0 +1,17 @@
+= Coffee Patterns
+
+Learning design patterns can be an arduous task. As a coffee lover (and espresso
+addict) I thought that it might be a great idea to teach design patterns to advanced
+beginners using the coffee meme.
+
+I will be expanding this repo for my design patterns class over time.
+
+== Future (Roadmap)
+
+I was thinking as an idea to actually create a koans type repo to teach my coffee
+patterns... maybe I will implement this soon :)
+
+== Copyright
+
+Copyright (c) 2011 Enrique Comba Riepenhausen. See LICENSE.txt for
+further details.

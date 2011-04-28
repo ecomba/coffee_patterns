@@ -20,9 +20,8 @@ def spec(pattern, spec)
 end
 
 namespace :patterns do
-  patterns = { :decorator => :decorating_coffee }
-  for pattern, directory in patterns
-    RSpec::Core::RakeTask.new(pattern) { |spec| spec(directory, spec) }
+  [ :decorator ].each do |pattern|
+    RSpec::Core::RakeTask.new(pattern) { |spec| spec(pattern, spec) }
   end
 end
 

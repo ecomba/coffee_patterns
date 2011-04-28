@@ -21,16 +21,16 @@ end
 
 def dirs(action)
   Dir.glob('*/').each do |dir|
-    action.(dir.gsub('/',''))
+    action.call(dir.gsub('/',''))
   end
 end
 
 namespace :patterns do
-  dirs  ->(pattern) {RSpec::Core::RakeTask.new(pattern) { |spec| spec_options(pattern, spec) }}
+  dirs  lambda { |pattern| RSpec::Core::RakeTask.new(pattern) { |spec| spec_options(pattern, spec) }}
 end
 
 task :spec do
-  dirs ->(pattern) { Rake::Task["patterns:#{pattern}"].invoke }
+  dirs lambda { |pattern| Rake::Task["patterns:#{pattern}"].invoke }
 end
 
 task :default => :spec

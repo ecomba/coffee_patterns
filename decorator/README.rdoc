@@ -1,4 +1,4 @@
-= Decorating Coffee
+= Adding your choice of ingredients to your coffee
 
 == Problem
 
@@ -21,15 +21,9 @@ coffee to your customers.
 Once you have created the classes above add specifications in the barista_spec.rb
 file and start serving coffee.
 
-== Intent
+== Intent (Decorator)
 
 Sometimes we want to attach responsibilities to an object dynamically without
 subclassing or extending the behaviour of an existing object. With the decorator
 we can embellish an object by recursively wrapping it into other objects which
 share the same interface.
-
-== Copyright
-
-Copyright (c) 2011 Enrique Comba Riepenhausen. See LICENSE.txt for
-further details.
-

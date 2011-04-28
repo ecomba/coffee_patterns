@@ -19,14 +19,18 @@ def spec(pattern, spec)
   spec.rspec_opts = "-f d -c -I #{path}"
 end
 
-namespace :patterns do
-  [ :decorator ].each do |pattern|
-    RSpec::Core::RakeTask.new(pattern) { |spec| spec(pattern, spec) }
+def dirs(action)
+  Dir.glob('*/').each do |dir|
+    action.(dir.gsub('/',''))
   end
 end
 
+namespace :patterns do
+  dirs  ->(pattern){RSpec::Core::RakeTask.new(pattern) { |spec| spec(pattern, spec) }}
+end
+
 task :spec do
-  Rake::Task['patterns:decorator'].invoke
+  dirs ->(pattern) { Rake::Task["patterns:#{pattern}"].invoke }
 end
 
 task :default => :spec

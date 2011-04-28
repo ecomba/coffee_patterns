@@ -1,0 +1,17 @@
+= Letting the barista do his thing
+
+== Problem
+
+As a customer you want to order your coffee and not bother what the barista is
+going to do (i.e. which objects he is going to call when he crafts that wonderfully
+smelling elixir for you).
+
+== Exercise
+
+Add methods to the barista class so that he can decide which objects to instantiate
+when you are wasking for your morning treat.
+
+== Intent (Factory Method)
+
+Define an interface for creating an object, but let subclasses decide which class 
+to instantiate. Factory Method lets a class defer instantiation to subclasses.

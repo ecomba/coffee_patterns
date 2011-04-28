@@ -16,7 +16,8 @@ end
 def spec_options(pattern, spec)
   spec.pattern = FileList["#{pattern}/spec/**/*_spec.rb"]
   path = File.expand_path(File.dirname(__FILE__) + "/#{pattern}/spec")
-  spec.rspec_opts = "-f d -c -I #{path}"
+  path2 = File.expand_path(File.dirname(__FILE__) + "/src/lib")
+  spec.rspec_opts = "-f d -c -I #{path} -I #{path2}"
 end
 
 def dirs(action)

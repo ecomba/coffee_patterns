@@ -1,3 +1,1 @@
-class Barista
-
-end
+require 'barista'

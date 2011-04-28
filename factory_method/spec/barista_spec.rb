@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Barista do
 
-  it 'is pending' do
-    pending
+  it 'serves an espresso when asked for one' do
+    Barista.espresso.should == 'one espresso'
   end
 end
